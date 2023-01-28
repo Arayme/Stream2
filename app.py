@@ -7,7 +7,9 @@ import openpyxl
 import tensorflow as tf
 
 from datetime import datetime, timedelta
-from keras.models import load_model
+#from keras.models import load_model
+
+
 #start
 
 st.set_page_config(page_title='ENSEM-AWS')
@@ -20,7 +22,8 @@ sheet_name = 'Prediction'
 sheet_name_2 = 'Loss'
 
 #load models
-model = load_model('lstm-model.h5')
+#model = load_model('lstm-model.h5')
+model = tf.keras.models.load_model('lstm-model.h5')
 
 df_Pred = pd.read_excel(excel_file,
                     sheet_name=sheet_name,
