@@ -3,10 +3,7 @@ import streamlit as st
 import plotly.express as px
 from PIL import Image
 import openpyxl
-
-#from datetime import datetime, timedelta
-#from keras.models import load_model
-
+from datetime import datetime, timedelta
 
 #start
 
@@ -19,9 +16,6 @@ excel_file = 'EnsemAWS.xlsx'
 sheet_name = 'Prediction'
 sheet_name_2 = 'Loss'
 
-#load models
-#model = load_model('lstm-model.h5')
-model = tf.keras.models.load_model('lstm-model.h5')
 
 df_Pred = pd.read_excel(excel_file,
                     sheet_name=sheet_name,
@@ -99,12 +93,6 @@ numbre_rows=df_Pred.shape[0]
 #                    names='Item')
 #st.plotly_chart(pie_chart2)
 #delete streamlit
-X=[[[0.23935558],[0.30782509],[0.30322209]]]
-st.markdown(f'*Available records: {X}*')
-
-yhat = model.predict( X,verbose=0)
-st.markdown(f'*Available records: {yhat}*')
-
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
