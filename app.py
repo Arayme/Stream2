@@ -4,7 +4,7 @@ import plotly.express as px
 from PIL import Image
 import openpyxl
 from datetime import datetime, timedelta
-from tensorflow.keras.models import load_model
+from tensorflow.models import load_model
 #start
 
 st.set_page_config(page_title='ENSEM-AWS')
