@@ -3,8 +3,11 @@ import streamlit as st
 import plotly.express as px
 from PIL import Image
 import openpyxl
+
+import tensorflow as tf
+
 from datetime import datetime, timedelta
-from tensorflow.models import load_model
+from keras.models import load_model
 #start
 
 st.set_page_config(page_title='ENSEM-AWS')
